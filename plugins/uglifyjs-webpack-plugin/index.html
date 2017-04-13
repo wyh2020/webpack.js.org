@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>UglifyjsWebpackPlugin</title>
+    <meta name="description" content="webpack 是一个模块打包器。它的主要目标是将 JavaScript 文件打包在一起，打包后的文件用于在浏览器中使用，但它也能够胜任转换(transform)、打包(bundle)或包裹(package)任何资源(resource or asset)。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2B3A42">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:200,400,400i,500" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+    
+      <link href="/cd9368abdb9fa509c40d.css" rel="stylesheet">
+    
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?39edd8e76884f07399be96cd422c9af3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+  </head>
+  <body>
+    <div id="site" class="site"><div class="interactive" id="components/notification-bar/notification-bar.jsx" data-props="{}"><div class="notification-bar "></div></div><div class="interactive" id="components/navigation/navigation.jsx" data-props="{&quot;sections&quot;:[{&quot;url&quot;:&quot;get-started&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x6982;&#x5FF5;&quot;,&quot;url&quot;:&quot;concepts&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x8D77;&#x70B9;(Entry Points)&quot;,&quot;url&quot;:&quot;concepts/entry-points&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;concepts/output&quot;},{&quot;title&quot;:&quot;&#x52A0;&#x8F7D;&#x5668;(Loaders)&quot;,&quot;url&quot;:&quot;concepts/loaders&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;concepts/plugins&quot;},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;(Configuration)&quot;,&quot;url&quot;:&quot;concepts/configuration&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Modules)&quot;,&quot;url&quot;:&quot;concepts/modules&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x89E3;&#x6790;(Module Resolution)&quot;,&quot;url&quot;:&quot;concepts/module-resolution&quot;},{&quot;title&quot;:&quot;&#x4F9D;&#x8D56;&#x56FE;&#x8868;(Dependency Graph)&quot;,&quot;url&quot;:&quot;concepts/dependency-graph&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;concepts/targets&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&quot;,&quot;url&quot;:&quot;concepts/hot-module-replacement&quot;}]},{&quot;title&quot;:&quot;&#x6307;&#x5357;&quot;,&quot;url&quot;:&quot;guides&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x8D77;&#x6B65;&quot;,&quot;url&quot;:&quot;guides/get-started&quot;},{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;url&quot;:&quot;guides/installation&quot;},{&quot;title&quot;:&quot;&#x4ECE; v1 &#x8FC1;&#x79FB;&#x5230; v2&quot;,&quot;url&quot;:&quot;guides/migrating&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB;&quot;,&quot;url&quot;:&quot;guides/code-splitting&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - CSS&quot;,&quot;url&quot;:&quot;guides/code-splitting-css&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - Libraries&quot;,&quot;url&quot;:&quot;guides/code-splitting-libraries&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - &#x4F7F;&#x7528; import()&quot;,&quot;url&quot;:&quot;guides/code-splitting-import&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - &#x4F7F;&#x7528; require.ensure&quot;,&quot;url&quot;:&quot;guides/code-splitting-require&quot;},{&quot;title&quot;:&quot;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6784;&#x5EFA;&quot;,&quot;url&quot;:&quot;guides/production-build&quot;},{&quot;title&quot;:&quot;&#x7F13;&#x5B58;&quot;,&quot;url&quot;:&quot;guides/caching&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;guides/development&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1; - Vagrant&quot;,&quot;url&quot;:&quot;guides/development-vagrant&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x4F9D;&#x8D56;&quot;,&quot;url&quot;:&quot;guides/dependency-management&quot;},{&quot;title&quot;:&quot;Shimming&quot;,&quot;url&quot;:&quot;guides/shimming&quot;},{&quot;title&quot;:&quot;&#x521B;&#x5EFA; Library&quot;,&quot;url&quot;:&quot;guides/author-libraries&quot;},{&quot;title&quot;:&quot;&#x6539;&#x5584;&#x6784;&#x5EFA;&#x6027;&#x80FD;&quot;,&quot;url&quot;:&quot;guides/build-performance&quot;},{&quot;title&quot;:&quot;&#x5BF9;&#x6BD4;&#x5176;&#x4ED6;&#x6253;&#x5305;&#x5668;&quot;,&quot;url&quot;:&quot;guides/comparison&quot;},{&quot;title&quot;:&quot;&#x5904;&#x7406;&#x517C;&#x5BB9;&quot;,&quot;url&quot;:&quot;guides/compatibility&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&quot;,&quot;url&quot;:&quot;guides/environment-variables&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362; - React&quot;,&quot;url&quot;:&quot;guides/hmr-react&quot;},{&quot;title&quot;:&quot;&#x61D2;&#x52A0;&#x8F7D; - React&quot;,&quot;url&quot;:&quot;guides/lazy-load-react&quot;},{&quot;title&quot;:&quot;Public Path&quot;,&quot;url&quot;:&quot;guides/public-path&quot;},{&quot;title&quot;:&quot;&#x4E0E;&#x4EFB;&#x52A1;/&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;&#x5668;&#x96C6;&#x6210;(Integration with task/test runners)&quot;,&quot;url&quot;:&quot;guides/task-test-runner&quot;},{&quot;title&quot;:&quot;Tree Shaking&quot;,&quot;url&quot;:&quot;guides/tree-shaking&quot;},{&quot;title&quot;:&quot;webpack &#x548C; Typescript&quot;,&quot;url&quot;:&quot;guides/webpack-and-typescript&quot;}]},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;development&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF1F;(How to write a plugin?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-plugin&quot;},{&quot;title&quot;:&quot;&#x6709;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x6A21;&#x5F0F;(Useful Plugin Patterns)&quot;,&quot;url&quot;:&quot;development/plugin-patterns&quot;},{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A; loader&#xFF1F;(How to write a loader?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-loader&quot;},{&quot;title&quot;:&quot;webpack &#x5408;&#x5E76;&#x3001;&#x6807;&#x8BB0;&#x548C;&#x53D1;&#x5E03;&#x6D41;&#x7A0B;(webpack merge, tag and release process)&quot;,&quot;url&quot;:&quot;development/release-process&quot;}]},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;url&quot;:&quot;configuration&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x914D;&#x7F6E;(Configuration Languages)&quot;,&quot;url&quot;:&quot;configuration/configuration-languages&quot;},{&quot;title&quot;:&quot;&#x591A;&#x79CD;&#x914D;&#x7F6E;&#x7C7B;&#x578B;&quot;,&quot;url&quot;:&quot;configuration/configuration-types&quot;},{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x548C;&#x4E0A;&#x4E0B;&#x6587;(Entry and Context)&quot;,&quot;url&quot;:&quot;configuration/entry-context&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;configuration/output&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Module)&quot;,&quot;url&quot;:&quot;configuration/module&quot;},{&quot;title&quot;:&quot;&#x89E3;&#x6790;(Resolve)&quot;,&quot;url&quot;:&quot;configuration/resolve&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;configuration/plugins&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x4E2D; Server(DevServer)&quot;,&quot;url&quot;:&quot;configuration/dev-server&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x5DE5;&#x5177;(Devtool)&quot;,&quot;url&quot;:&quot;configuration/devtool&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;configuration/target&quot;},{&quot;title&quot;:&quot;Watch &#x548C; WatchOptions&quot;,&quot;url&quot;:&quot;configuration/watch&quot;},{&quot;title&quot;:&quot;&#x5916;&#x90E8;&#x6269;&#x5C55;(Externals)&quot;,&quot;url&quot;:&quot;configuration/externals&quot;},{&quot;title&quot;:&quot;Node&quot;,&quot;url&quot;:&quot;configuration/node&quot;},{&quot;title&quot;:&quot;&#x6027;&#x80FD;(Performance)&quot;,&quot;url&quot;:&quot;configuration/performance&quot;},{&quot;title&quot;:&quot;&#x7EDF;&#x8BA1;(Stats)&quot;,&quot;url&quot;:&quot;configuration/stats&quot;},{&quot;title&quot;:&quot;&#x5176;&#x5B83;&#x9009;&#x9879;(Other Options)&quot;,&quot;url&quot;:&quot;configuration/other-options&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(CLI)&quot;,&quot;url&quot;:&quot;api/cli&quot;},{&quot;title&quot;:&quot;Node.js API&quot;,&quot;url&quot;:&quot;api/node&quot;},{&quot;title&quot;:&quot;&#x52A0;&#x8F7D;&#x5668; API(Loader API)&quot;,&quot;url&quot;:&quot;api/loaders&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api/plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Tapable&quot;,&quot;url&quot;:&quot;api/plugins/tapable&quot;},{&quot;title&quot;:&quot;&#x7F16;&#x8BD1;&#x5668;(Compiler)&quot;,&quot;url&quot;:&quot;api/plugins/compiler&quot;},{&quot;title&quot;:&quot;Compilation&quot;,&quot;url&quot;:&quot;api/plugins/compilation&quot;},{&quot;title&quot;:&quot;Context/Normal Module Factories&quot;,&quot;url&quot;:&quot;api/plugins/module-factories&quot;},{&quot;title&quot;:&quot;Resolver&quot;,&quot;url&quot;:&quot;api/plugins/resolver&quot;},{&quot;title&quot;:&quot;Dependency&quot;,&quot;url&quot;:&quot;api/plugins/dependency&quot;},{&quot;title&quot;:&quot;Parser&quot;,&quot;url&quot;:&quot;api/plugins/parser&quot;},{&quot;title&quot;:&quot;Templates&quot;,&quot;url&quot;:&quot;api/plugins/template&quot;}]},{&quot;url&quot;:&quot;pluginsapi&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;Loaders&quot;,&quot;url&quot;:&quot;loaders&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;babel-loader&quot;,&quot;url&quot;:&quot;loaders/babel-loader&quot;},{&quot;title&quot;:&quot;bundle-loader&quot;,&quot;url&quot;:&quot;loaders/bundle-loader&quot;},{&quot;title&quot;:&quot;coffee-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-loader&quot;},{&quot;title&quot;:&quot;coffee-redux-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-redux-loader&quot;},{&quot;title&quot;:&quot;coverjs-loader&quot;,&quot;url&quot;:&quot;loaders/coverjs-loader&quot;},{&quot;title&quot;:&quot;css-loader&quot;,&quot;url&quot;:&quot;loaders/css-loader&quot;},{&quot;title&quot;:&quot;dynamic-css-loader&quot;,&quot;url&quot;:&quot;loaders/dynamic-css-loader&quot;},{&quot;title&quot;:&quot;exports-loader&quot;,&quot;url&quot;:&quot;loaders/exports-loader&quot;},{&quot;title&quot;:&quot;expose-loader&quot;,&quot;url&quot;:&quot;loaders/expose-loader&quot;},{&quot;title&quot;:&quot;file-loader&quot;,&quot;url&quot;:&quot;loaders/file-loader&quot;},{&quot;title&quot;:&quot;html-loader&quot;,&quot;url&quot;:&quot;loaders/html-loader&quot;},{&quot;title&quot;:&quot;i18n-loader&quot;,&quot;url&quot;:&quot;loaders/i18n-loader&quot;},{&quot;title&quot;:&quot;imports-loader&quot;,&quot;url&quot;:&quot;loaders/imports-loader&quot;},{&quot;title&quot;:&quot;istanbul-instrumenter-loader&quot;,&quot;url&quot;:&quot;loaders/istanbul-instrumenter-loader&quot;},{&quot;title&quot;:&quot;jshint-loader&quot;,&quot;url&quot;:&quot;loaders/jshint-loader&quot;},{&quot;title&quot;:&quot;json-loader&quot;,&quot;url&quot;:&quot;loaders/json-loader&quot;},{&quot;title&quot;:&quot;json5-loader&quot;,&quot;url&quot;:&quot;loaders/json5-loader&quot;},{&quot;title&quot;:&quot;less-loader&quot;,&quot;url&quot;:&quot;loaders/less-loader&quot;},{&quot;title&quot;:&quot;mocha-loader&quot;,&quot;url&quot;:&quot;loaders/mocha-loader&quot;},{&quot;title&quot;:&quot;multi-loader&quot;,&quot;url&quot;:&quot;loaders/multi-loader&quot;},{&quot;title&quot;:&quot;node-loader&quot;,&quot;url&quot;:&quot;loaders/node-loader&quot;},{&quot;title&quot;:&quot;null-loader&quot;,&quot;url&quot;:&quot;loaders/null-loader&quot;},{&quot;title&quot;:&quot;raw-loader&quot;,&quot;url&quot;:&quot;loaders/raw-loader&quot;},{&quot;title&quot;:&quot;react-proxy-loader&quot;,&quot;url&quot;:&quot;loaders/react-proxy-loader&quot;},{&quot;title&quot;:&quot;restyle-loader&quot;,&quot;url&quot;:&quot;loaders/restyle-loader&quot;},{&quot;title&quot;:&quot;sass-loader&quot;,&quot;url&quot;:&quot;loaders/sass-loader&quot;},{&quot;title&quot;:&quot;script-loader&quot;,&quot;url&quot;:&quot;loaders/script-loader&quot;},{&quot;title&quot;:&quot;source-map-loader&quot;,&quot;url&quot;:&quot;loaders/source-map-loader&quot;},{&quot;title&quot;:&quot;style-loader&quot;,&quot;url&quot;:&quot;loaders/style-loader&quot;},{&quot;title&quot;:&quot;svg-inline-loader&quot;,&quot;url&quot;:&quot;loaders/svg-inline-loader&quot;},{&quot;title&quot;:&quot;transform-loader&quot;,&quot;url&quot;:&quot;loaders/transform-loader&quot;},{&quot;title&quot;:&quot;url-loader&quot;,&quot;url&quot;:&quot;loaders/url-loader&quot;},{&quot;title&quot;:&quot;val-loader&quot;,&quot;url&quot;:&quot;loaders/val-loader&quot;},{&quot;title&quot;:&quot;worker-loader&quot;,&quot;url&quot;:&quot;loaders/worker-loader&quot;},{&quot;title&quot;:&quot;yaml-frontmatter-loader&quot;,&quot;url&quot;:&quot;loaders/yaml-frontmatter-loader&quot;}]},{&quot;title&quot;:&quot;Plugins&quot;,&quot;url&quot;:&quot;plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;MinChunkSizePlugin&quot;,&quot;url&quot;:&quot;plugins/min-chunk-size-plugin&quot;},{&quot;title&quot;:&quot;BabiliWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/babili-webpack-plugin&quot;},{&quot;title&quot;:&quot;BannerPlugin&quot;,&quot;url&quot;:&quot;plugins/banner-plugin&quot;},{&quot;title&quot;:&quot;CommonsChunkPlugin&quot;,&quot;url&quot;:&quot;plugins/commons-chunk-plugin&quot;},{&quot;title&quot;:&quot;ComponentWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/component-webpack-plugin&quot;},{&quot;title&quot;:&quot;CompressionWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/compression-webpack-plugin&quot;},{&quot;title&quot;:&quot;DefinePlugin&quot;,&quot;url&quot;:&quot;plugins/define-plugin&quot;},{&quot;title&quot;:&quot;EnvironmentPlugin&quot;,&quot;url&quot;:&quot;plugins/environment-plugin&quot;},{&quot;title&quot;:&quot;ExtractTextWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/extract-text-webpack-plugin&quot;},{&quot;title&quot;:&quot;HtmlWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/html-webpack-plugin&quot;},{&quot;title&quot;:&quot;I18nWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/i18n-webpack-plugin&quot;},{&quot;title&quot;:&quot;LimitChunkCountPlugin&quot;,&quot;url&quot;:&quot;plugins/limit-chunk-count-plugin&quot;},{&quot;title&quot;:&quot;loader-options-plugin&quot;,&quot;url&quot;:&quot;plugins/loader-options-plugin&quot;},{&quot;title&quot;:&quot;NormalModuleReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/normal-module-replacement-plugin&quot;},{&quot;title&quot;:&quot;NpmInstallWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/npm-install-webpack-plugin&quot;},{&quot;title&quot;:&quot;ProvidePlugin&quot;,&quot;url&quot;:&quot;plugins/provide-plugin&quot;},{&quot;title&quot;:&quot;SourceMapDevToolPlugin&quot;,&quot;url&quot;:&quot;plugins/source-map-dev-tool-plugin&quot;},{&quot;title&quot;:&quot;UglifyjsWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/uglifyjs-webpack-plugin&quot;}]},{&quot;title&quot;:&quot;Support&quot;,&quot;url&quot;:&quot;support&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/feedback&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/moneyDistribution&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;organization&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x5176;&#x4ED6;&quot;,&quot;url&quot;:&quot;/&quot;,&quot;pages&quot;:[]}],&quot;pageUrl&quot;:&quot;plugins/uglifyjs-webpack-plugin&quot;}"><header class="navigation"></header></div><div class="interactive" id="components/sidebar-mobile/sidebar-mobile.jsx" data-props="{&quot;sections&quot;:[{&quot;url&quot;:&quot;get-started&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x6982;&#x5FF5;&quot;,&quot;url&quot;:&quot;concepts&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x8D77;&#x70B9;(Entry Points)&quot;,&quot;url&quot;:&quot;concepts/entry-points&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;concepts/output&quot;},{&quot;title&quot;:&quot;&#x52A0;&#x8F7D;&#x5668;(Loaders)&quot;,&quot;url&quot;:&quot;concepts/loaders&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;concepts/plugins&quot;},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;(Configuration)&quot;,&quot;url&quot;:&quot;concepts/configuration&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Modules)&quot;,&quot;url&quot;:&quot;concepts/modules&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x89E3;&#x6790;(Module Resolution)&quot;,&quot;url&quot;:&quot;concepts/module-resolution&quot;},{&quot;title&quot;:&quot;&#x4F9D;&#x8D56;&#x56FE;&#x8868;(Dependency Graph)&quot;,&quot;url&quot;:&quot;concepts/dependency-graph&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;concepts/targets&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&quot;,&quot;url&quot;:&quot;concepts/hot-module-replacement&quot;}]},{&quot;title&quot;:&quot;&#x6307;&#x5357;&quot;,&quot;url&quot;:&quot;guides&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x8D77;&#x6B65;&quot;,&quot;url&quot;:&quot;guides/get-started&quot;},{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;url&quot;:&quot;guides/installation&quot;},{&quot;title&quot;:&quot;&#x4ECE; v1 &#x8FC1;&#x79FB;&#x5230; v2&quot;,&quot;url&quot;:&quot;guides/migrating&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB;&quot;,&quot;url&quot;:&quot;guides/code-splitting&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - CSS&quot;,&quot;url&quot;:&quot;guides/code-splitting-css&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - Libraries&quot;,&quot;url&quot;:&quot;guides/code-splitting-libraries&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - &#x4F7F;&#x7528; import()&quot;,&quot;url&quot;:&quot;guides/code-splitting-import&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB; - &#x4F7F;&#x7528; require.ensure&quot;,&quot;url&quot;:&quot;guides/code-splitting-require&quot;},{&quot;title&quot;:&quot;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6784;&#x5EFA;&quot;,&quot;url&quot;:&quot;guides/production-build&quot;},{&quot;title&quot;:&quot;&#x7F13;&#x5B58;&quot;,&quot;url&quot;:&quot;guides/caching&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;guides/development&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1; - Vagrant&quot;,&quot;url&quot;:&quot;guides/development-vagrant&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x4F9D;&#x8D56;&quot;,&quot;url&quot;:&quot;guides/dependency-management&quot;},{&quot;title&quot;:&quot;Shimming&quot;,&quot;url&quot;:&quot;guides/shimming&quot;},{&quot;title&quot;:&quot;&#x521B;&#x5EFA; Library&quot;,&quot;url&quot;:&quot;guides/author-libraries&quot;},{&quot;title&quot;:&quot;&#x6539;&#x5584;&#x6784;&#x5EFA;&#x6027;&#x80FD;&quot;,&quot;url&quot;:&quot;guides/build-performance&quot;},{&quot;title&quot;:&quot;&#x5BF9;&#x6BD4;&#x5176;&#x4ED6;&#x6253;&#x5305;&#x5668;&quot;,&quot;url&quot;:&quot;guides/comparison&quot;},{&quot;title&quot;:&quot;&#x5904;&#x7406;&#x517C;&#x5BB9;&quot;,&quot;url&quot;:&quot;guides/compatibility&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&quot;,&quot;url&quot;:&quot;guides/environment-variables&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362; - React&quot;,&quot;url&quot;:&quot;guides/hmr-react&quot;},{&quot;title&quot;:&quot;&#x61D2;&#x52A0;&#x8F7D; - React&quot;,&quot;url&quot;:&quot;guides/lazy-load-react&quot;},{&quot;title&quot;:&quot;Public Path&quot;,&quot;url&quot;:&quot;guides/public-path&quot;},{&quot;title&quot;:&quot;&#x4E0E;&#x4EFB;&#x52A1;/&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;&#x5668;&#x96C6;&#x6210;(Integration with task/test runners)&quot;,&quot;url&quot;:&quot;guides/task-test-runner&quot;},{&quot;title&quot;:&quot;Tree Shaking&quot;,&quot;url&quot;:&quot;guides/tree-shaking&quot;},{&quot;title&quot;:&quot;webpack &#x548C; Typescript&quot;,&quot;url&quot;:&quot;guides/webpack-and-typescript&quot;}]},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;development&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF1F;(How to write a plugin?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-plugin&quot;},{&quot;title&quot;:&quot;&#x6709;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x6A21;&#x5F0F;(Useful Plugin Patterns)&quot;,&quot;url&quot;:&quot;development/plugin-patterns&quot;},{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A; loader&#xFF1F;(How to write a loader?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-loader&quot;},{&quot;title&quot;:&quot;webpack &#x5408;&#x5E76;&#x3001;&#x6807;&#x8BB0;&#x548C;&#x53D1;&#x5E03;&#x6D41;&#x7A0B;(webpack merge, tag and release process)&quot;,&quot;url&quot;:&quot;development/release-process&quot;}]},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;url&quot;:&quot;configuration&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x914D;&#x7F6E;(Configuration Languages)&quot;,&quot;url&quot;:&quot;configuration/configuration-languages&quot;},{&quot;title&quot;:&quot;&#x591A;&#x79CD;&#x914D;&#x7F6E;&#x7C7B;&#x578B;&quot;,&quot;url&quot;:&quot;configuration/configuration-types&quot;},{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x548C;&#x4E0A;&#x4E0B;&#x6587;(Entry and Context)&quot;,&quot;url&quot;:&quot;configuration/entry-context&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;configuration/output&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Module)&quot;,&quot;url&quot;:&quot;configuration/module&quot;},{&quot;title&quot;:&quot;&#x89E3;&#x6790;(Resolve)&quot;,&quot;url&quot;:&quot;configuration/resolve&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;configuration/plugins&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x4E2D; Server(DevServer)&quot;,&quot;url&quot;:&quot;configuration/dev-server&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x5DE5;&#x5177;(Devtool)&quot;,&quot;url&quot;:&quot;configuration/devtool&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;configuration/target&quot;},{&quot;title&quot;:&quot;Watch &#x548C; WatchOptions&quot;,&quot;url&quot;:&quot;configuration/watch&quot;},{&quot;title&quot;:&quot;&#x5916;&#x90E8;&#x6269;&#x5C55;(Externals)&quot;,&quot;url&quot;:&quot;configuration/externals&quot;},{&quot;title&quot;:&quot;Node&quot;,&quot;url&quot;:&quot;configuration/node&quot;},{&quot;title&quot;:&quot;&#x6027;&#x80FD;(Performance)&quot;,&quot;url&quot;:&quot;configuration/performance&quot;},{&quot;title&quot;:&quot;&#x7EDF;&#x8BA1;(Stats)&quot;,&quot;url&quot;:&quot;configuration/stats&quot;},{&quot;title&quot;:&quot;&#x5176;&#x5B83;&#x9009;&#x9879;(Other Options)&quot;,&quot;url&quot;:&quot;configuration/other-options&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(CLI)&quot;,&quot;url&quot;:&quot;api/cli&quot;},{&quot;title&quot;:&quot;Node.js API&quot;,&quot;url&quot;:&quot;api/node&quot;},{&quot;title&quot;:&quot;&#x52A0;&#x8F7D;&#x5668; API(Loader API)&quot;,&quot;url&quot;:&quot;api/loaders&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api/plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Tapable&quot;,&quot;url&quot;:&quot;api/plugins/tapable&quot;},{&quot;title&quot;:&quot;&#x7F16;&#x8BD1;&#x5668;(Compiler)&quot;,&quot;url&quot;:&quot;api/plugins/compiler&quot;},{&quot;title&quot;:&quot;Compilation&quot;,&quot;url&quot;:&quot;api/plugins/compilation&quot;},{&quot;title&quot;:&quot;Context/Normal Module Factories&quot;,&quot;url&quot;:&quot;api/plugins/module-factories&quot;},{&quot;title&quot;:&quot;Resolver&quot;,&quot;url&quot;:&quot;api/plugins/resolver&quot;},{&quot;title&quot;:&quot;Dependency&quot;,&quot;url&quot;:&quot;api/plugins/dependency&quot;},{&quot;title&quot;:&quot;Parser&quot;,&quot;url&quot;:&quot;api/plugins/parser&quot;},{&quot;title&quot;:&quot;Templates&quot;,&quot;url&quot;:&quot;api/plugins/template&quot;}]},{&quot;url&quot;:&quot;pluginsapi&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;Loaders&quot;,&quot;url&quot;:&quot;loaders&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;babel-loader&quot;,&quot;url&quot;:&quot;loaders/babel-loader&quot;},{&quot;title&quot;:&quot;bundle-loader&quot;,&quot;url&quot;:&quot;loaders/bundle-loader&quot;},{&quot;title&quot;:&quot;coffee-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-loader&quot;},{&quot;title&quot;:&quot;coffee-redux-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-redux-loader&quot;},{&quot;title&quot;:&quot;coverjs-loader&quot;,&quot;url&quot;:&quot;loaders/coverjs-loader&quot;},{&quot;title&quot;:&quot;css-loader&quot;,&quot;url&quot;:&quot;loaders/css-loader&quot;},{&quot;title&quot;:&quot;dynamic-css-loader&quot;,&quot;url&quot;:&quot;loaders/dynamic-css-loader&quot;},{&quot;title&quot;:&quot;exports-loader&quot;,&quot;url&quot;:&quot;loaders/exports-loader&quot;},{&quot;title&quot;:&quot;expose-loader&quot;,&quot;url&quot;:&quot;loaders/expose-loader&quot;},{&quot;title&quot;:&quot;file-loader&quot;,&quot;url&quot;:&quot;loaders/file-loader&quot;},{&quot;title&quot;:&quot;html-loader&quot;,&quot;url&quot;:&quot;loaders/html-loader&quot;},{&quot;title&quot;:&quot;i18n-loader&quot;,&quot;url&quot;:&quot;loaders/i18n-loader&quot;},{&quot;title&quot;:&quot;imports-loader&quot;,&quot;url&quot;:&quot;loaders/imports-loader&quot;},{&quot;title&quot;:&quot;istanbul-instrumenter-loader&quot;,&quot;url&quot;:&quot;loaders/istanbul-instrumenter-loader&quot;},{&quot;title&quot;:&quot;jshint-loader&quot;,&quot;url&quot;:&quot;loaders/jshint-loader&quot;},{&quot;title&quot;:&quot;json-loader&quot;,&quot;url&quot;:&quot;loaders/json-loader&quot;},{&quot;title&quot;:&quot;json5-loader&quot;,&quot;url&quot;:&quot;loaders/json5-loader&quot;},{&quot;title&quot;:&quot;less-loader&quot;,&quot;url&quot;:&quot;loaders/less-loader&quot;},{&quot;title&quot;:&quot;mocha-loader&quot;,&quot;url&quot;:&quot;loaders/mocha-loader&quot;},{&quot;title&quot;:&quot;multi-loader&quot;,&quot;url&quot;:&quot;loaders/multi-loader&quot;},{&quot;title&quot;:&quot;node-loader&quot;,&quot;url&quot;:&quot;loaders/node-loader&quot;},{&quot;title&quot;:&quot;null-loader&quot;,&quot;url&quot;:&quot;loaders/null-loader&quot;},{&quot;title&quot;:&quot;raw-loader&quot;,&quot;url&quot;:&quot;loaders/raw-loader&quot;},{&quot;title&quot;:&quot;react-proxy-loader&quot;,&quot;url&quot;:&quot;loaders/react-proxy-loader&quot;},{&quot;title&quot;:&quot;restyle-loader&quot;,&quot;url&quot;:&quot;loaders/restyle-loader&quot;},{&quot;title&quot;:&quot;sass-loader&quot;,&quot;url&quot;:&quot;loaders/sass-loader&quot;},{&quot;title&quot;:&quot;script-loader&quot;,&quot;url&quot;:&quot;loaders/script-loader&quot;},{&quot;title&quot;:&quot;source-map-loader&quot;,&quot;url&quot;:&quot;loaders/source-map-loader&quot;},{&quot;title&quot;:&quot;style-loader&quot;,&quot;url&quot;:&quot;loaders/style-loader&quot;},{&quot;title&quot;:&quot;svg-inline-loader&quot;,&quot;url&quot;:&quot;loaders/svg-inline-loader&quot;},{&quot;title&quot;:&quot;transform-loader&quot;,&quot;url&quot;:&quot;loaders/transform-loader&quot;},{&quot;title&quot;:&quot;url-loader&quot;,&quot;url&quot;:&quot;loaders/url-loader&quot;},{&quot;title&quot;:&quot;val-loader&quot;,&quot;url&quot;:&quot;loaders/val-loader&quot;},{&quot;title&quot;:&quot;worker-loader&quot;,&quot;url&quot;:&quot;loaders/worker-loader&quot;},{&quot;title&quot;:&quot;yaml-frontmatter-loader&quot;,&quot;url&quot;:&quot;loaders/yaml-frontmatter-loader&quot;}]},{&quot;title&quot;:&quot;Plugins&quot;,&quot;url&quot;:&quot;plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;MinChunkSizePlugin&quot;,&quot;url&quot;:&quot;plugins/min-chunk-size-plugin&quot;},{&quot;title&quot;:&quot;BabiliWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/babili-webpack-plugin&quot;},{&quot;title&quot;:&quot;BannerPlugin&quot;,&quot;url&quot;:&quot;plugins/banner-plugin&quot;},{&quot;title&quot;:&quot;CommonsChunkPlugin&quot;,&quot;url&quot;:&quot;plugins/commons-chunk-plugin&quot;},{&quot;title&quot;:&quot;ComponentWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/component-webpack-plugin&quot;},{&quot;title&quot;:&quot;CompressionWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/compression-webpack-plugin&quot;},{&quot;title&quot;:&quot;DefinePlugin&quot;,&quot;url&quot;:&quot;plugins/define-plugin&quot;},{&quot;title&quot;:&quot;EnvironmentPlugin&quot;,&quot;url&quot;:&quot;plugins/environment-plugin&quot;},{&quot;title&quot;:&quot;ExtractTextWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/extract-text-webpack-plugin&quot;},{&quot;title&quot;:&quot;HtmlWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/html-webpack-plugin&quot;},{&quot;title&quot;:&quot;I18nWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/i18n-webpack-plugin&quot;},{&quot;title&quot;:&quot;LimitChunkCountPlugin&quot;,&quot;url&quot;:&quot;plugins/limit-chunk-count-plugin&quot;},{&quot;title&quot;:&quot;loader-options-plugin&quot;,&quot;url&quot;:&quot;plugins/loader-options-plugin&quot;},{&quot;title&quot;:&quot;NormalModuleReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/normal-module-replacement-plugin&quot;},{&quot;title&quot;:&quot;NpmInstallWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/npm-install-webpack-plugin&quot;},{&quot;title&quot;:&quot;ProvidePlugin&quot;,&quot;url&quot;:&quot;plugins/provide-plugin&quot;},{&quot;title&quot;:&quot;SourceMapDevToolPlugin&quot;,&quot;url&quot;:&quot;plugins/source-map-dev-tool-plugin&quot;},{&quot;title&quot;:&quot;UglifyjsWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/uglifyjs-webpack-plugin&quot;}]},{&quot;title&quot;:&quot;Support&quot;,&quot;url&quot;:&quot;support&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/feedback&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/moneyDistribution&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;organization&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x5176;&#x4ED6;&quot;,&quot;url&quot;:&quot;/&quot;,&quot;pages&quot;:[]}]}"><nav class="sidebar-mobile"></nav></div><div class="container page"><div class="interactive" id="components/sidebar/sidebar.jsx" data-props="{&quot;sectionName&quot;:&quot;plugins&quot;,&quot;pages&quot;:[{&quot;url&quot;:&quot;plugins/min-chunk-size-plugin&quot;,&quot;title&quot;:&quot;MinChunkSizePlugin&quot;,&quot;anchors&quot;:[]},{&quot;url&quot;:&quot;plugins/babili-webpack-plugin&quot;,&quot;title&quot;:&quot;BabiliWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x9009;&#x9879;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;babiliOptions&quot;,&quot;id&quot;:&quot;babilioptions&quot;},{&quot;title&quot;:&quot;Overrides&quot;,&quot;id&quot;:&quot;overrides&quot;},{&quot;title&quot;:&quot;&#x4E3A;&#x4EC0;&#x4E48;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Maintainers&quot;,&quot;id&quot;:&quot;maintainers&quot;}]},{&quot;url&quot;:&quot;plugins/banner-plugin&quot;,&quot;title&quot;:&quot;BannerPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x9009;&#x9879;&quot;,&quot;id&quot;:&quot;-&quot;}]},{&quot;url&quot;:&quot;plugins/commons-chunk-plugin&quot;,&quot;title&quot;:&quot;CommonsChunkPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x4F8B;&#x5B50;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x516C;&#x5171;chunk &#x7528;&#x4E8E; &#x5165;&#x53E3;chunk (entry chunk)&quot;,&quot;id&quot;:&quot;-chunk-chunk-entry-chunk-&quot;},{&quot;title&quot;:&quot;&#x660E;&#x786E;&#x7B2C;&#x4E09;&#x65B9;&#x5E93; chunk&quot;,&quot;id&quot;:&quot;-chunk&quot;},{&quot;title&quot;:&quot;&#x5C06;&#x516C;&#x5171;&#x6A21;&#x5757;&#x6253;&#x5305;&#x8FDB;&#x7236; chunk&quot;,&quot;id&quot;:&quot;-chunk&quot;},{&quot;title&quot;:&quot;&#x989D;&#x5916;&#x7684;&#x5F02;&#x6B65; &#x516C;&#x5171;chunk&quot;,&quot;id&quot;:&quot;-chunk&quot;},{&quot;title&quot;:&quot;&#x7ED9; minChunks &#x914D;&#x7F6E;&#x4F20;&#x5165;&#x51FD;&#x6570;&quot;,&quot;id&quot;:&quot;-minchunks-&quot;},{&quot;title&quot;:&quot;Manifest file&quot;,&quot;id&quot;:&quot;manifest-file&quot;},{&quot;title&quot;:&quot;Combining implicit common vendor chunks and manifest file&quot;,&quot;id&quot;:&quot;combining-implicit-common-vendor-chunks-and-manifest-file&quot;},{&quot;title&quot;:&quot;Examples&quot;,&quot;id&quot;:&quot;examples&quot;}]},{&quot;url&quot;:&quot;plugins/component-webpack-plugin&quot;,&quot;title&quot;:&quot;ComponentWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;webpack &#x7684;&#x7EC4;&#x4EF6;&quot;,&quot;id&quot;:&quot;webpack-&quot;},{&quot;title&quot;:&quot;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;License&quot;,&quot;id&quot;:&quot;license&quot;}]},{&quot;url&quot;:&quot;plugins/compression-webpack-plugin&quot;,&quot;title&quot;:&quot;CompressionWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;Install&quot;,&quot;id&quot;:&quot;install&quot;},{&quot;title&quot;:&quot;Usage&quot;,&quot;id&quot;:&quot;usage&quot;},{&quot;title&quot;:&quot;Maintainers&quot;,&quot;id&quot;:&quot;maintainers&quot;}]},{&quot;url&quot;:&quot;plugins/define-plugin&quot;,&quot;title&quot;:&quot;DefinePlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x7528;&#x4F8B;&#xFF1A;&#x529F;&#x80FD;&#x6807;&#x8BB0;(Feature Flags)&quot;,&quot;id&quot;:&quot;-feature-flags-&quot;},{&quot;title&quot;:&quot;&#x7528;&#x4F8B;&#xFF1A;&#x670D;&#x52A1; URL(Service URLs)&quot;,&quot;id&quot;:&quot;-url-service-urls-&quot;}]},{&quot;url&quot;:&quot;plugins/environment-plugin&quot;,&quot;title&quot;:&quot;EnvironmentPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x5E26;&#x9ED8;&#x8BA4;&#x503C;&#x4F7F;&#x7528;&quot;,&quot;id&quot;:&quot;-&quot;}]},{&quot;url&quot;:&quot;plugins/extract-text-webpack-plugin&quot;,&quot;title&quot;:&quot;ExtractTextWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;#extract&quot;,&quot;id&quot;:&quot;-extract&quot;},{&quot;title&quot;:&quot;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Extracting Sass or LESS&quot;,&quot;id&quot;:&quot;extracting-sass-or-less&quot;},{&quot;title&quot;:&quot;Modify filename&quot;,&quot;id&quot;:&quot;modify-filename&quot;},{&quot;title&quot;:&quot;&#x7EF4;&#x62A4;&#x8005;&quot;,&quot;id&quot;:&quot;-&quot;}]},{&quot;url&quot;:&quot;plugins/html-webpack-plugin&quot;,&quot;title&quot;:&quot;HtmlWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x57FA;&#x672C;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&quot;,&quot;id&quot;:&quot;-&quot;}]},{&quot;url&quot;:&quot;plugins/i18n-webpack-plugin&quot;,&quot;title&quot;:&quot;I18nWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;Install&quot;,&quot;id&quot;:&quot;install&quot;},{&quot;title&quot;:&quot;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Maintainers&quot;,&quot;id&quot;:&quot;maintainers&quot;}]},{&quot;url&quot;:&quot;plugins/limit-chunk-count-plugin&quot;,&quot;title&quot;:&quot;LimitChunkCountPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;Single-Page-App&quot;,&quot;id&quot;:&quot;single-page-app&quot;},{&quot;title&quot;:&quot;Multi-Page-App&quot;,&quot;id&quot;:&quot;multi-page-app&quot;}]},{&quot;url&quot;:&quot;plugins/loader-options-plugin&quot;,&quot;title&quot;:&quot;loader-options-plugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x793A;&#x4F8B;&quot;,&quot;id&quot;:&quot;-&quot;}]},{&quot;url&quot;:&quot;plugins/normal-module-replacement-plugin&quot;,&quot;title&quot;:&quot;NormalModuleReplacementPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x57FA;&#x672C;&#x793A;&#x4F8B;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x9AD8;&#x7EA7;&#x793A;&#x4F8B;&quot;,&quot;id&quot;:&quot;-&quot;}]},{&quot;url&quot;:&quot;plugins/npm-install-webpack-plugin&quot;,&quot;title&quot;:&quot;NpmInstallWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;Install&quot;,&quot;id&quot;:&quot;install&quot;},{&quot;title&quot;:&quot;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Demo&quot;,&quot;id&quot;:&quot;demo&quot;},{&quot;title&quot;:&quot;Features&quot;,&quot;id&quot;:&quot;features&quot;},{&quot;title&quot;:&quot;Maintainers&quot;,&quot;id&quot;:&quot;maintainers&quot;}]},{&quot;url&quot;:&quot;plugins/provide-plugin&quot;,&quot;title&quot;:&quot;ProvidePlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5178;&#x578B;&#x7684;&#x4F8B;&#x5B50;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528; jQuery&quot;,&quot;id&quot;:&quot;-jquery&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528; jQuery &#x548C; Angular 1&quot;,&quot;id&quot;:&quot;-jquery-angular-1&quot;}]},{&quot;url&quot;:&quot;plugins/source-map-dev-tool-plugin&quot;,&quot;title&quot;:&quot;SourceMapDevToolPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;Examples&quot;,&quot;id&quot;:&quot;examples&quot;}]},{&quot;url&quot;:&quot;plugins/uglifyjs-webpack-plugin&quot;,&quot;title&quot;:&quot;UglifyjsWebpackPlugin&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x9009;&#x9879;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Mangling&quot;,&quot;id&quot;:&quot;mangling&quot;},{&quot;title&quot;:&quot;Extracting Comments&quot;,&quot;id&quot;:&quot;extracting-comments&quot;},{&quot;title&quot;:&quot;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&quot;,&quot;id&quot;:&quot;-&quot;}]}],&quot;currentPage&quot;:&quot;plugins/uglifyjs-webpack-plugin&quot;}"><nav class="sidebar"></nav></div><section class="page__content"><h1>UglifyjsWebpackPlugin</h1><a class="page__edit" href="https://github.com/webpack-contrib/uglifyjs-webpack-plugin/edit/master/README.md">&#x7F16;&#x8F91;&#x6B64;&#x9875; &#xA0;&#xA0;<i class="icon-edit"></i></a><div><h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x5B89;&#x88C5;</span><a class="icon-link" href="#-"></a></h2>
+<p>&#x4F7F;&#x7528; <a href="https://yarnpkg.com">Yarn</a>:</p>
+<pre><code class="lang-bash">yarn add uglifyjs-webpack-plugin --dev
+</code></pre>
+<p>&#x4F7F;&#x7528; npm:</p>
+<pre><code class="lang-bash">npm <span class="token function">install</span> uglifyjs-webpack-plugin --save-dev
+</code></pre>
+<p><strong>&#x5341;&#x5206;&#x91CD;&#x8981;!</strong> &#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x4F9D;&#x8D56; uglify-js&#xFF0C;&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x4E5F;&#x8981;&#x5B89;&#x88C5; uglify-js&#x3002;&#x7136;&#x800C;&#xFF0C;&#x76EE;&#x524D; (2017/1/25) &#x53EF;&#x7528;&#x7684; uglify-js npm &#x5305;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x538B;&#x7F29; ES6 &#x4EE3;&#x7801;&#x3002;&#x4E3A;&#x4E86;&#x652F;&#x6301; ES6&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x538B;&#x7F29; ES6 &#x80FD;&#x529B;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x53C8;&#x79F0;&#x4E4B;&#x4E3A; <em>harmony</em> &#x7248;&#x672C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x538B;&#x7F29;&#x76EE;&#x6807;&#x662F; ES6:</p>
+<pre><code class="lang-bash">yarn add git://github.com/mishoo/UglifyJS2<span class="token comment" spellcheck="true">#harmony --dev</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x538B;&#x7F29;&#x76EE;&#x6807;&#x662F; ES5:</p>
+<pre><code class="lang-bash">yarn add uglify-js --dev
+</code></pre>
+<h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x7528;&#x6CD5;</span><a class="icon-link" href="#-"></a></h2>
+<pre><code class="lang-javascript"><span class="token keyword">const</span> UglifyJSPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;uglifyjs-webpack-plugin&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">UglifyJSPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x9009;&#x9879;</span><a class="icon-link" href="#-"></a></h2>
+<p>&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x652F;&#x6301; UglifyJS &#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x8FF0;:</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x5C5E;&#x6027;</div><div class="table-th">&#x7C7B;&#x578B;</div><div class="table-th">&#x9ED8;&#x8BA4;&#x503C;</div><div class="table-th">&#x63CF;&#x8FF0;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        compress
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean, object
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        true
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x89C1; <a href="http://lisperator.net/uglifyjs/compress">UglifyJS &#x6587;&#x6863;</a>&#x3002;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        mangle
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean, object
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        true
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x89C1;&#x4E0B;&#x8282;.
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        beautify
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        false
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x7F8E;&#x5316;&#x8F93;&#x51FA;&#x3002;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        output
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4E00;&#x4E2A;&#x63D0;&#x4F9B; UglifyJS <a href="https://github.com/mishoo/UglifyJS2/blob/master/lib/output.js">OutputStream</a> &#x9009;&#x9879;&#x7684;&#x5BF9;&#x8C61;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x66F4;&#x5E95;&#x5C42;&#x5730;&#x8BBF;&#x95EE; UglifyJS &#x8F93;&#x51FA;&#x3002;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        comments
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean, RegExp, function(astNode, comment) -&gt; boolean
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        &#x9ED8;&#x8BA4;&#x4FDD;&#x5B58;&#x5305;&#x542B; <code>/*!</code>, <code>/**!</code>, <code>@preserve</code> or <code>@license</code> &#x7684;&#x6CE8;&#x91CA;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x6CE8;&#x91CA;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        extractComments
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean, RegExp, function (astNode, comment) -&gt; boolean, object
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        false
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        Whether comments shall be extracted to a separate file, see below.
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        sourceMap
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        false
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4F7F;&#x7528; SourceMaps &#x5C06;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x7684;&#x4F4D;&#x7F6E;&#x6620;&#x5C04;&#x5230;&#x6A21;&#x5757;&#x3002;&#x8FD9;&#x4F1A;&#x51CF;&#x6162;&#x7F16;&#x8BD1;&#x7684;&#x901F;&#x5EA6;&#x3002;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        test
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        RegExp, Array<regexp>
+	    </regexp></div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        <code>/.js($|\?)/i</code>
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x6D4B;&#x8BD5;&#x5339;&#x914D;&#x7684;&#x6587;&#x4EF6;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        include
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        RegExp, Array<regexp>
+	    </regexp></div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x53EA;&#x6D4B;&#x8BD5;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;&#x3002;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x5C5E;&#x6027;
+	    </div>
+	    <div class="table-td-content">
+	        exclude
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        RegExp, Array<regexp>
+	    </regexp></div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x63CF;&#x8FF0;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8981;&#x4ECE;&#x6D4B;&#x8BD5;&#x4E2D;&#x6392;&#x9664;&#x7684;&#x6587;&#x4EF6;&#x3002;
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h2 class="header"><a class="anchor" href="#mangling" id="mangling"></a><span class="text">Mangling</span><a class="icon-link" href="#mangling"></a></h2>
+<p><code>mangle.props (boolean|object)</code> - &#x4F20;&#x9012; true &#x6216;&#x8005;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x5E76;&#x63D0;&#x4F9B; UglifyJS mangling &#x5C5E;&#x6027;&#x9009;&#x9879; - &#x53C2;&#x8003;&#x6709;&#x5173; mangleProperties &#x9009;&#x9879;&#x7684; <a href="https://github.com/mishoo/UglifyJS2#mangleproperties-options">UglifyJS &#x6587;&#x6863;</a>&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;UglifyJS &#x8B66;&#x544A;&#xFF0C;<a href="https://github.com/mishoo/UglifyJS2#mangling-property-names---mangle-props">&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; mangling &#x5C5E;&#x6027;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x7834;&#x574F;&#x4F60;&#x7684; source</a>&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x786E;&#x5B9A;&#x4F60;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#xFF0C;&#x4F60;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x5B83;&#xFF01;&#x4F60;&#x53EF;&#x4EE5;&#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x8C03;&#x6574;&#x884C;&#x4E3A;&#xFF1A;</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="token keyword">new</span> <span class="token class-name">UglifyJsPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mangle<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// &#x8DF3;&#x8FC7;&#x8FD9;&#x4E9B;</span>
+    except<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;$super&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;$&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;exports&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;require&apos;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 class="header"><a class="anchor" href="#extracting-comments" id="extracting-comments"></a><span class="text">Extracting Comments</span><a class="icon-link" href="#extracting-comments"></a></h2>
+<p>The <code>extractComments</code> option can be</p>
+<ul>
+<li><code>true</code>: All comments that normally would be preserved by the <code>comments</code> option will be moved to a separate file. If the original file is named <code>foo.js</code>, then the comments will be stored to <code>foo.js.LICENSE</code></li>
+<li>regular expression (given as <code>RegExp</code> or <code>string</code>) or a <code>function (astNode, comment) -&gt; boolean</code>:
+All comments that match the given expression (resp. are evaluated to <code>true</code> by the function) will be extracted to the separate file. The <code>comments</code> option specifies whether the comment will be preserved, i.e. it is possible to preserve some comments (e.g. annotations) while extracting others or even preserving comments that have been extracted.</li>
+<li>an <code>object</code> consisting of the following keys, all optional:<ul>
+<li><code>condition</code>: regular expression or function (see previous point)</li>
+<li><code>filename</code>: The file where the extracted comments will be stored. Can be either a <code>string</code> or <code>function (string) -&gt; string</code> which will be given the original filename. Default is to append the suffix <code>.LICENSE</code> to the original filename.</li>
+<li><code>banner</code>: The banner text that points to the extracted file and will be added on top of the original file. will be added to the original file. Can be <code>false</code> (no banner), a <code>string</code>, or a <code>function (string) -&gt; string</code> that will be called with the filename where extracted comments have been stored. Will be wrapped into comment.
+Default: <code>/*! For license information please see foo.js.LICENSE */</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x7EF4;&#x62A4;&#x4EBA;&#x5458;</span><a class="icon-link" href="#-"></a></h2>
+<table><tbody><tr><td align="center"><p><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/166921?v=3&amp;s=150"></p>
+<p><br></p>
+<p><a href="https://github.com/bebraw"></a></p>
+<p>Juho Veps&#xE4;l&#xE4;inen</p>
+<p></p>
+<p></p></td><p></p>
+<td align="center"><p><img width="150" height="150" src="https://avatars2.githubusercontent.com/u/8420490?v=3&amp;s=150"></p>
+<p><br></p>
+<p><a href="https://github.com/d3viant0ne"></a></p>
+<p>Joshua Wiens</p>
+<p></p>
+<p></p></td><p></p>
+<td align="center"><p><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/533616?v=3&amp;s=150"></p>
+<p><br></p>
+<p><a href="https://github.com/SpaceK33z"></a></p>
+<p>Kees Kluskens</p>
+<p></p>
+<p></p></td><p></p>
+<td align="center"><p><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/3408176?v=3&amp;s=150"></p>
+<p><br></p>
+<p><a href="https://github.com/TheLarkInn"></a></p>
+<p>Sean Larkin</p>
+<p></p>
+<p></p></td><p></p>
+<p></p></tr><p></p>
+<tbody><p></p></tbody></tbody></table><p></p>
+</div><hr style="display:none;"><h3 style="display:none;">&#x8D21;&#x732E;&#x8005;</h3><noscript></noscript><div class="interactive" id="components/gitter/gitter.jsx" data-props="{}"><span class="gitter"></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/get-started" class="footer__link">&#x8D77;&#x6B65;</a><a href="/organization" class="footer__link">&#x7EC4;&#x7EC7;</a><a href="/contribute" class="footer__link">&#x652F;&#x6301;</a><a href="/guides/why-webpack#comparison" class="footer__link">&#x6BD4;&#x8F83;</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/6bc5d8cf78d442a984e70195db059b69.svg"></a></section><section class="footer__right"><a href="/branding" class="footer__link">&#x54C1;&#x724C;</a><a href="//gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">&#x66F4;&#x65B0;&#x65E5;&#x5FD7;</a><a href="/license" class="footer__link">&#x9075;&#x5FAA;&#x534F;&#x8BAE;</a><a class="footer__link">&#x7CA4;ICP&#x5907;17008907&#x53F7;</a><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="footer__license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-46921629-2', 'auto');ga('send', 'pageview');</script></div>
+
+    
+      <script src="/a097f0ba6a55d8903a873017103ec64c.js"></script>
+    
+
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'webpack/webpack',
+        activationElement: false
+      };
+    </script>
+
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+  </body>
+</html>

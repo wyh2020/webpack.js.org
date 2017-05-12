@@ -34,9 +34,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/support/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/writers-guide/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/vote/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>    <url>
@@ -48,17 +48,17 @@
     </url>    <url>
         <loc>https://webpack.js.org/api/plugins/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/concepts/configuration/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/concepts/dependency-graph/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/concepts/configuration/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/concepts/entry-points/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/concepts/hot-module-replacement/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/concepts/loaders/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/concepts/module-resolution/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/concepts/loaders/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/concepts/modules/index.html</loc>
     </url>    <url>
@@ -132,9 +132,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/guides/code-splitting-require/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/guides/comparison/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/guides/compatibility/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/guides/comparison/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/guides/dependency-management/index.html</loc>
     </url>    <url>
@@ -148,9 +148,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/guides/hmr-react/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/guides/installation/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/guides/lazy-load-react/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/guides/installation/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/guides/migrating/index.html</loc>
     </url>    <url>
@@ -164,13 +164,13 @@
     </url>    <url>
         <loc>https://webpack.js.org/guides/tree-shaking/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/guides/webpack-and-typescript/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
+        <loc>https://webpack.js.org/guides/webpack-and-typescript/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/loaders/bundle-loader/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/loaders/coffee-loader/index.html</loc>
     </url>    <url>
@@ -180,13 +180,13 @@
     </url>    <url>
         <loc>https://webpack.js.org/loaders/css-loader/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/loaders/dynamic-css-loader/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/loaders/exports-loader/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/loaders/expose-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/dynamic-css-loader/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/loaders/file-loader/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/loaders/expose-loader/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/loaders/html-loader/index.html</loc>
     </url>    <url>

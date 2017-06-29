@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/174ffc86c71052b29a84.css" rel="stylesheet">
+      <link href="/23e00fa003201b06a8f3.css" rel="stylesheet">
     
 
     <script>
@@ -107,10 +107,10 @@ module<span class="token punctuation">.</span>exports<span class="token punctuat
 <p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF1A;<code>&quot;/abc/loader1.js?xyz!/abc/node_modules/loader2/index.js!/abc/resource.js?rrr&quot;</code></p>
 <h3 class="header"><a class="anchor" href="#this-query" id="this-query"></a><span class="text"><code>this.query</code></span><a class="icon-link" href="#this-query"></a></h3>
 <ol>
-<li>&#x5982;&#x679C;&#x8FD9;&#x4E2A;loader&#x914D;&#x7F6E;&#x4E86; <a href="/configuration/module/#useentry"><code>options</code></a>&#x5BF9;&#x8C61;&#x7684;&#x8BDD;&#xFF0C;<code>this.query</code>&#x5C31;&#x662F;&#x8FD9;&#x4E2A;option&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x3002;</li>
-<li>&#x5982;&#x679C;loaders&#x4E2D;&#x6CA1;&#x6709; <a href="/configuration/module/#useentry"><code>options</code></a>&#xFF0C;&#x4EE5;query&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x65F6;&#xFF0C;<code>this.query</code>&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4EE5;<code>?</code>&#x5F00;&#x5934;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x8FD9;&#x4E2A; loader &#x914D;&#x7F6E;&#x4E86; <a href="/configuration/module/#useentry"><code>options</code></a> &#x5BF9;&#x8C61;&#x7684;&#x8BDD;&#xFF0C;<code>this.query</code> &#x5C31;&#x6307;&#x5411;&#x8FD9;&#x4E2A; option &#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x5982;&#x679C; loader &#x4E2D;&#x6CA1;&#x6709; <code>options</code>&#xFF0C;&#x4EE5;query &#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x65F6;&#xFF0C;<code>this.query</code> &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4EE5; <code>?</code> &#x5F00;&#x5934;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
 </ol>
-<blockquote class="tip"><div class="tip-content"> &#x4F7F;&#x7528;<code>loader-utils</code>&#x4E2D;&#x7684;<a href="https://github.com/webpack/loader-utils#getoptions"><code>getOptions</code>&#x65B9;&#x6CD5;</a>&#x6765;&#x63D0;&#x53D6;&#x7ED9;&#x5B9A;loader&#x4E2D;&#x7684;option&#x3002; </div></blockquote><h3 class="header"><a class="anchor" href="#this-callback" id="this-callback"></a><span class="text"><code>this.callback</code></span><a class="icon-link" href="#this-callback"></a></h3>
+<blockquote class="warning"><div class="tip-content"> <code>options</code> &#x5DF2;&#x53D6;&#x4EE3; <code>query</code>&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x5C5E;&#x6027;&#x5E9F;&#x5F03;&#x3002;&#x4F7F;&#x7528;<code>loader-utils</code>&#x4E2D;&#x7684; <a href="https://github.com/webpack/loader-utils#getoptions"><code>getOptions</code> &#x65B9;&#x6CD5;</a>&#x6765;&#x63D0;&#x53D6;&#x7ED9;&#x5B9A; loader &#x4E2D;&#x7684; option&#x3002; </div></blockquote><h3 class="header"><a class="anchor" href="#this-callback" id="this-callback"></a><span class="text"><code>this.callback</code></span><a class="icon-link" href="#this-callback"></a></h3>
 <p>&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x540C;&#x6B65;&#x6216;&#x8005;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#x7684;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x7ED3;&#x679C;&#x7684;&#x51FD;&#x6570;&#x3002;&#x9884;&#x671F;&#x7684;&#x53C2;&#x6570;&#x662F;&#xFF1A;</p>
 <pre><code class="lang-typescript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callback</span><span class="token punctuation">(</span>
     err<span class="token punctuation">:</span> Error <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
@@ -142,12 +142,14 @@ module<span class="token punctuation">.</span>exports<span class="token punctuat
 </code></pre>
 <p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF1A;</p>
 <pre><code class="lang-javascript"><span class="token punctuation">[</span>
-  <span class="token punctuation">{</span> request<span class="token punctuation">:</span> <span class="token string">&quot;/abc/loader1.js?xyz&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    request<span class="token punctuation">:</span> <span class="token string">&quot;/abc/loader1.js?xyz&quot;</span><span class="token punctuation">,</span>
     path<span class="token punctuation">:</span> <span class="token string">&quot;/abc/loader1.js&quot;</span><span class="token punctuation">,</span>
     query<span class="token punctuation">:</span> <span class="token string">&quot;?xyz&quot;</span><span class="token punctuation">,</span>
     module<span class="token punctuation">:</span> <span class="token punctuation">[</span>Function<span class="token punctuation">]</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span> request<span class="token punctuation">:</span> <span class="token string">&quot;/abc/node_modules/loader2/index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    request<span class="token punctuation">:</span> <span class="token string">&quot;/abc/node_modules/loader2/index.js&quot;</span><span class="token punctuation">,</span>
     path<span class="token punctuation">:</span> <span class="token string">&quot;/abc/node_modules/loader2/index.js&quot;</span><span class="token punctuation">,</span>
     query<span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
     module<span class="token punctuation">:</span> <span class="token punctuation">[</span>Function<span class="token punctuation">]</span>

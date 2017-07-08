@@ -58,9 +58,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/concepts/dependency-graph/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/concepts/entry-points/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/concepts/hot-module-replacement/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/concepts/entry-points/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/concepts/loaders/index.html</loc>
     </url>    <url>
@@ -122,9 +122,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/get-started/why-webpack/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/guides/asset-management/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/guides/build-performance/index.html</loc>
     </url>    <url>
@@ -136,9 +136,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/guides/code-splitting-css/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/guides/code-splitting-libraries/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/guides/code-splitting-require/index.html</loc>
     </url>    <url>
@@ -158,9 +158,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/guides/installation/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/guides/integrations/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/guides/installation/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/guides/lazy-load-react/index.html</loc>
     </url>    <url>
@@ -184,13 +184,13 @@
     </url>    <url>
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/loaders/bundle-loader/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/loaders/cache-loader/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/loaders/coffee-loader/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/loaders/cache-loader/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/loaders/coffee-redux-loader/index.html</loc>
     </url>    <url>
@@ -214,9 +214,9 @@
     </url>    <url>
         <loc>https://webpack.js.org/loaders/imports-loader/index.html</loc>
     </url>    <url>
-        <loc>https://webpack.js.org/loaders/jshint-loader/index.html</loc>
-    </url>    <url>
         <loc>https://webpack.js.org/loaders/istanbul-instrumenter-loader/index.html</loc>
+    </url>    <url>
+        <loc>https://webpack.js.org/loaders/jshint-loader/index.html</loc>
     </url>    <url>
         <loc>https://webpack.js.org/loaders/json-loader/index.html</loc>
     </url>    <url>
